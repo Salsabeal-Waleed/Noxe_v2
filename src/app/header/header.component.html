@@ -1,0 +1,22 @@
+<header class="d-flex align-items-center vh-100 position-relative ">
+
+  <div class="layer position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center">
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4 h4 fw-bolder mt-5">Top Trending Media Right Now </h2>
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let movie of  headerTrendingMoive">
+          <ng-template carouselSlide [id]="movie.id">
+            <a [routerLink]="['/moviedetails' , movie.id]">
+             <img [src]="imgPrefix + movie.poster_path">
+           </a>
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+
+    </div>
+
+  </div>
+</header>

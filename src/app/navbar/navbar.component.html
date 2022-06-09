@@ -1,0 +1,63 @@
+<nav class="d-flex fixed-top align-items-center justify-content-between p-2 px-lg-4">
+
+
+
+  <div class="d-flex">
+
+    <h3 class="mb-0"><a href="#">Noxe</a></h3>
+
+    <ul class="list-unstyled ms-4 mb-0  d-flex justify-content-around align-items-center">
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/home">Home</a>
+      </li>
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/about">About</a>
+      </li>
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/gallery">Gallery</a>
+      </li>
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/movies">Movies</a>
+      </li>
+
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/tv">TV</a>
+      </li>
+      <li >
+        <a *ngIf="isLogin" class="mx-2" routerLinkActive="item" routerLink="/contacts">Contacts</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="d-flex">
+   <div class="social-media">
+     <a href="https://www.facebook.com/" target="_blank"><i class="fab mx-2 fa-facebook icon"></i></a>
+     <a href="https://www.instagram.com/" target="_blank" ><i class="fab mx-2 fa-instagram icon"></i></a>
+     <a href="https://www.youtube.com/" target="_blank"><i class="fab mx-2 fa-youtube icon"></i></a>
+     <a href="https://www.spotify.com/eg-ar/" target="_blank"><i class="fab mx-2 fa-spotify icon"></i></a>
+     <a href="https://www.xbox.com/en-US/eg-ar/" target="_blank"><i class="fab mx-2 fa-xbox icon"></i></a>
+   </div>
+   <ul class="list-unstyled mb-0  d-flex justify-content-around">
+     <li >
+       <a *ngIf="!isLogin" class="mx-2" routerLinkActive="item" routerLink="/login">Login</a>
+     </li>
+     <li >
+       <a *ngIf="!isLogin" class="mx-2" routerLinkActive="item" routerLink="/register">Registers</a>
+     </li>
+     <li class="nav-item dropdown ms-3">
+      <a *ngIf="isLogin" class="nav-link p-0 dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Settings
+      </a>
+      <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item hItem" routerLink="settings/profile">Porifle</a></li>
+        <li><a class="dropdown-item hItem" routerLink="settings/password">Password</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item hItem" routerLink="settings/log" >Log</a></li>
+      </ul>
+    </li>
+     <li >
+       <a *ngIf="isLogin" (click)="callLogOut()" class="mx-2" routerLinkActive="item" routerLink="/register">Logout</a>
+     </li>
+   </ul>
+  </div>
+</nav>

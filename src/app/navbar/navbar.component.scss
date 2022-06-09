@@ -1,0 +1,34 @@
+
+$homeColor:rgba(130, 96, 233, 0.5) !important;
+$shadowBlack:rgba( 0,0,0,0.5) !important;
+.hItem
+{
+  &:hover
+  {
+    background-color:$shadowBlack;
+  }
+}
+nav
+{
+  background-color:$shadowBlack;
+
+}
+.item
+{
+  color: $homeColor;
+}
+.icon
+{
+  &:hover
+  {
+    color: $homeColor;
+  }
+}
+
+li:hover
+{
+  > a
+   {
+    color:$homeColor;
+   }
+}
